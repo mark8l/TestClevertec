@@ -1,8 +1,10 @@
-package ru.sharipov.test.models;
+package ru.sharipov.test.models.check;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+
+import ru.sharipov.test.models.good.Good;
 
 public class Check {
 

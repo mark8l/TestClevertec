@@ -1,4 +1,4 @@
-package ru.sharipov.test.models;
+package ru.sharipov.test.models.good;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

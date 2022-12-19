@@ -1,4 +1,4 @@
-package ru.sharipov.test.models;
+package ru.sharipov.test.models.item;
 
 public abstract class ItemDecorator implements ItemInterface {
 	

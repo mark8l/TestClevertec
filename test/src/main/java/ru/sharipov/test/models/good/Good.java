@@ -1,4 +1,4 @@
-package ru.sharipov.test.models;
+package ru.sharipov.test.models.good;
 
 public class Good {
 	private int id;
