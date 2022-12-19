@@ -71,7 +71,4 @@ public class Good {
 	public String toString() {
 		return String.format("%d     %s     %.2f     %.2f    %b", amount, name, cost, totalCost, discount);
 	}
-	
-	
-	
 }

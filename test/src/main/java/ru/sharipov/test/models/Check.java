@@ -12,10 +12,18 @@ public class Check {
 	private static final String SHOP = "Shop №1";
 	private static final String ADRESS = "15, Main Street, Some City";
 	private static final String TELEPHONE = "0-123-456-78-90";
+	private float totalCoustWithDiscount;
+	private float discount;
 	private float totalCost;
 	
 	private List<Good> goods;
 
+	private Check(CheckBuilder checkBuilder) {
+		totalCost = checkBuilder.totalCost;
+		discount = checkBuilder.discount;
+		totalCoustWithDiscount = checkBuilder.totalCoustWithDiscount;
+	}
+	
 	public Check(List<Good> goods) {
 		totalCost = 0;
 		checkCount++;
@@ -53,5 +61,28 @@ public class Check {
 		return result;
 	}
 	
+	
+	public static class CheckBuilder {
+		
+		private List<Good> goods;
+		private float totalCoustWithDiscount;
+		private float discount;
+		private float totalCost;
+		
+		public CheckBuilder(List<Good> goods) {
+			this.goods = goods;
+		}
+		
+		public Check build() {
+			Check check = new Check(this);
+			validateCheck(check);
+			return check;
+		}
+		
+		private void validateCheck(Check check) {
+			
+		}
+		
+	}
 	
 }

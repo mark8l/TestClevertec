@@ -1,0 +1,5 @@
+0,sofa,150,true
+1,chair,75,false
+2,table,100,true
+3,pillow,20,false
+4,blanket,50,false
