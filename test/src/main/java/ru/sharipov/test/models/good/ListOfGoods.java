@@ -59,8 +59,6 @@ public class ListOfGoods {
 			while (reader.ready()) {
 				res = reader.readLine();
 			}
-
-			reader.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -110,7 +108,6 @@ public class ListOfGoods {
 					goods.add(g);
 				}
 			}
-			reader.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
