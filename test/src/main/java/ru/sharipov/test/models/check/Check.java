@@ -25,6 +25,7 @@ public class Check {
 
 	private Check(CheckBuilder checkBuilder) {
 		itemInterfaces = checkBuilder.items;
+		checkCount++;
 
 	}
 
@@ -121,7 +122,7 @@ public class Check {
 	private String getCrossLine() {
 		String res = "";
 		while(res.length() < 51) {
-			res += "-";
+			res += "—";
 		}
 		return res;
 	}

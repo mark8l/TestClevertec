@@ -17,10 +17,6 @@ public class JustTestMainFeatures {
 		list = itemsService.getListOfItems();
 		CheckBuilder checkBuilder = new CheckBuilder(list);
 		Check check = checkBuilder.build();
-//		for (ItemInterface itemInterface : list) {
-//			System.out.println(itemInterface);
-//		}
 		System.out.println(check);
-
 	}
 }
