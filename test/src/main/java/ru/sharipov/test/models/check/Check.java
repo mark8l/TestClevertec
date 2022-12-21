@@ -110,7 +110,7 @@ public class Check {
 		String end = "";
 		begin = String.format("CASHIER: №%s", checkCount);
 		end = String.format("Date: %s", dtf_Date.format(ldt));
-		while((begin.length() + end.length()) < 37) {
+		while((begin.length() + end.length()) < 51) {
 			begin = begin + " ";
 		}
 		res = begin + end;
@@ -120,7 +120,7 @@ public class Check {
 	
 	private String getCrossLine() {
 		String res = "";
-		while(res.length() < 37) {
+		while(res.length() < 51) {
 			res += "-";
 		}
 		return res;
@@ -129,7 +129,7 @@ public class Check {
 	private String getTimeLine(LocalDateTime ldt) {
 		DateTimeFormatter dtf_Time = DateTimeFormatter.ofPattern("HH:mm:ss");
 		String res = String.format("Time: %s  ", dtf_Time.format(ldt));
-		while(res.length() < 37) {
+		while(res.length() < 51) {
 			res = " " + res;
 		}
 		return res;
@@ -137,12 +137,12 @@ public class Check {
 
 	private String fillName(String input) {
 		String res = "";
-		if (input.length() > 14) {
-			res = input.substring(0, 14);
+		if (input.length() > 28) {
+			res = input.substring(0, 28);
 		}
 		else {
 			res = input;
-			while (res.length() < 15) {
+			while (res.length() < 29) {
 				res += " ";
 			}
 		} 
@@ -154,7 +154,7 @@ public class Check {
 		
 		String begin = "TOTAL";
 		String end = "$" + String.valueOf(total);
-		while ((begin.length() + end.length()) < 37) {
+		while ((begin.length() + end.length()) < 51) {
 			begin += " ";
 		}
 		res = begin + end;
@@ -171,15 +171,15 @@ public class Check {
 
 	private String fillLaneCenter(String input) {
 		String res = "";
-		if (input.length() < 37) {
+		if (input.length() < 51) {
 			res = input;
-			while (res.length() < 37) {
+			while (res.length() < 51) {
 				res = " " + res + " ";
 			}
 			if (res.length() > 37) {
-				res = res.substring(0, 37);
+				res = res.substring(0, 51);
 			}
-		} else if (input.length() > 37) {
+		} else if (input.length() > 51) {
 
 		} else {
 			res = input;
