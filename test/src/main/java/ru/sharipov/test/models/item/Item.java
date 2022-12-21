@@ -11,7 +11,7 @@ public class Item implements ItemInterface {
 	public Item() {
 	}
 
-	public Item(int id, String name, float cost, int amount) {
+	public Item(int id, String name, int amount, float cost) {
 		this.id = id;
 		this.name = name;
 		this.cost = cost;
@@ -24,7 +24,7 @@ public class Item implements ItemInterface {
 		totalCount = amount * cost;
 		return totalCount;
 	}
-
+	@Override
 	public int getId() {
 		return id;
 	}
@@ -32,7 +32,7 @@ public class Item implements ItemInterface {
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -40,7 +40,7 @@ public class Item implements ItemInterface {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	@Override
 	public float getCost() {
 		return cost;
 	}
@@ -48,7 +48,7 @@ public class Item implements ItemInterface {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
-
+	@Override
 	public int getAmount() {
 		return amount;
 	}
@@ -57,4 +57,12 @@ public class Item implements ItemInterface {
 		this.amount = amount;
 	}
 
+	@Override
+	public String toString() {
+		return "Item [id=" + id + ", name=" + name + ", cost=" + cost + ", amount=" + amount + ", totalCount="
+				+ totalCount + "]";
+	}
+
+	
+	
 }
